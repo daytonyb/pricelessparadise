@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Priceless Paradise - Antigua Vacation</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="denial-modal" class="modal-overlay">
+  <div class="modal-content">
+    <div class="modal-eyebrow">✦ Mandatory Acknowledgment</div>
+    <h2>Terms of Denial</h2>
+    <p>To optimize your user experience, this site uses carefully curated narratives. By proceeding, you agree to ignore the socioeconomic realities of your destination, the wages of the hospitality staff, and the condition of the local infrastructure.</p>
+    <div class="modal-buttons">
+      <button class="btn-primary" onclick="acceptDenial()">I Agree (Take Me to Paradise)</button>
+      <a href="https://en.wikipedia.org/wiki/Neocolonialism" class="btn-outline decline-btn">I Decline</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== NAV ===== -->
+<nav>
+  <div class="nav-logo"><b><i>PRICELESS PARADISE</i></b></div>
+  <ul class="nav-links">
+    <li><a href="#home" class="active" onclick="setActive(this)">Home</a></li>
+    <li><a href="#about" onclick="setActive(this)">About</a></li>
+    <li><a href="#contact" onclick="setActive(this)">Contact Us</a></li>
+  </ul>
+  <div class="nav-seal">Priceless Paradise UK<br>Official Publication</div>
+</nav>
+
+<!-- ===== HOME ===== -->
+<section id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-sun"></div>
+
+  <!-- Palm trees -->
+  <svg class="hero-palms" viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax meet">
+    <!-- Right palms -->
+    <path d="M920 300 Q922 220 926 165" stroke="#2d5a1a" stroke-width="7" fill="none"/>
+    <path d="M926 165 Q890 105 840 90" stroke="#2d5a1a" stroke-width="5" fill="none"/>
+    <path d="M926 165 Q948 100 990 88" stroke="#2d5a1a" stroke-width="5" fill="none"/>
+    <path d="M926 165 Q965 130 1010 135" stroke="#2d5a1a" stroke-width="5" fill="none"/>
+    <path d="M926 165 Q895 148 858 150" stroke="#2d5a1a" stroke-width="5" fill="none"/>
+    <ellipse cx="835" cy="87" rx="38" ry="14" fill="#3a7a22" transform="rotate(-18 835 87)"/>
+    <ellipse cx="992" cy="85" rx="38" ry="14" fill="#3a7a22" transform="rotate(12 992 85)"/>
+    <ellipse cx="1013" cy="133" rx="32" ry="12" fill="#4a8c2a" transform="rotate(28 1013 133)"/>
+    <ellipse cx="856" cy="148" rx="32" ry="12" fill="#4a8c2a" transform="rotate(-22 856 148)"/>
+    <!-- Second right palm -->
+    <path d="M1060 300 Q1062 240 1065 195" stroke="#2d5a1a" stroke-width="6" fill="none"/>
+    <path d="M1065 195 Q1030 145 990 132" stroke="#2d5a1a" stroke-width="4" fill="none"/>
+    <path d="M1065 195 Q1095 142 1135 135" stroke="#2d5a1a" stroke-width="4" fill="none"/>
+    <ellipse cx="988" cy="130" rx="32" ry="12" fill="#3a7a22" transform="rotate(-14 988 130)"/>
+    <ellipse cx="1137" cy="133" rx="32" ry="12" fill="#3a7a22" transform="rotate(16 1137 133)"/>
+    <!-- Left dark palms -->
+    <path d="M160 300 Q156 228 150 178" stroke="#1a3012" stroke-width="7" fill="none"/>
+    <path d="M150 178 Q112 118 72 105" stroke="#1a3012" stroke-width="4.5" fill="none"/>
+    <path d="M150 178 Q175 115 215 108" stroke="#1a3012" stroke-width="4.5" fill="none"/>
+    <ellipse cx="70" cy="102" rx="34" ry="13" fill="#243d15" transform="rotate(-20 70 102)"/>
+    <ellipse cx="217" cy="106" rx="34" ry="13" fill="#243d15" transform="rotate(14 217 106)"/>
+    <!-- Crumbling building left -->
+    <rect x="30" y="175" width="75" height="110" fill="#3d2d18" rx="1"/>
+    <rect x="34" y="182" width="16" height="18" fill="#1a1208" rx="0"/>
+    <rect x="58" y="182" width="16" height="18" fill="#1a1208" rx="0"/>
+    <rect x="34" y="210" width="16" height="18" fill="#1a1208" rx="0"/>
+    <rect x="58" y="210" width="16" height="18" fill="#1a1208" rx="0"/>
+    <polygon points="95,175 112,175 102,200" fill="#3d2d18"/>
+    <!-- Worker silhouette -->
+    <circle cx="120" cy="212" r="10" fill="#1a1208"/>
+    <rect x="113" y="222" width="14" height="30" fill="#1a1208" rx="1"/>
+    <line x1="113" y1="233" x2="100" y2="246" stroke="#1a1208" stroke-width="4" stroke-linecap="round"/>
+    <line x1="127" y1="233" x2="136" y2="244" stroke="#1a1208" stroke-width="4" stroke-linecap="round"/>
+    <line x1="116" y1="252" x2="113" y2="270" stroke="#1a1208" stroke-width="4" stroke-linecap="round"/>
+    <line x1="127" y1="252" x2="130" y2="270" stroke="#1a1208" stroke-width="4" stroke-linecap="round"/>
+    <!-- Tourist right side bright -->
+    <circle cx="760" cy="220" r="14" fill="#e8c090"/>
+    <rect x="749" y="234" width="22" height="34" fill="#ff7f4a" rx="1"/>
+    <rect x="773" y="230" width="16" height="11" fill="#555" rx="2"/>
+    <circle cx="781" cy="235" r="4.5" fill="#999"/>
+    <circle cx="800" cy="226" r="12" fill="#c4907a"/>
+    <rect x="789" y="238" width="22" height="30" fill="#5fa8d3" rx="1"/>
+  </svg>
+
+  <div class="beach-strip"></div>
+  <div class="wave-layer-2"></div>
+  <div class="wave-layer"></div>
+
+  <div class="hero-content">
+    <h1 class="hero-title">
+      Come to <em>Paradise.</em><br>Don't Look Too Hard.
+    </h1>
+    <p class="hero-subtitle">
+      "A tourist is an ugly thing." — But you won't know that.<br>You were never meant to.
+    </p>
+    <div class="hero-buttons">
+      <a href="#about" class="btn-primary">Discover the Truth</a>
+      <a href="#contact" class="btn-outline">Plan Your Escape</a>
+    </div>
+  </div>
+
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-arrow"></div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-left reveal">
+      <div class="section-eyebrow">✦ About This Paradise</div>
+      <h2 class="section-title">The Island<br>They Sell You.<br><em>And the One That Exists.</em></h2>
+      <div class="divider-gold"></div>
+
+      <p class="about-body">
+        Antigua is beautiful. That is not in dispute. It is an island of breathtaking beaches — one for every day of the year, so they say. The water is turquoise. The sun is generous. The resort staff smile with professional warmth.
+        <em>* Smiling is a condition of employment. The wages do not always inspire it naturally.</em>
+      </p>
+
+      <p class="about-body">
+        What this advertisement — like all advertisements — carefully omits is the texture of daily life for the 100,000 people who do not leave when the vacation ends. The roads that do not reach the resorts. The hospital with aging equipment. The library damaged by a 1974 earthquake and never rebuilt. Tourism generated the funds. The library remained closed.
+        <em>* A new airport terminal was constructed. Priorities are a form of honesty, if you look closely enough.</em>
+      </p>
+
+      <div class="kincaid-quote-block">
+        <div class="kincaid-quote-text">
+          "That the native does not like the tourist is not hard to explain. For every native of every place is a potential tourist, and every tourist is a native of somewhere... but some natives — most natives in the world — cannot go anywhere."
+        </div>
+        <div class="kincaid-attr">— Adapted from Jamaica Kincaid, <em>A Small Place</em></div>
+      </div>
+
+      
+
+      <div class="about-cta">
+        <a href="#contact" class="btn-navy">Book Your Forgetting</a>
+        <a href="https://en.wikipedia.org/wiki/Jamaica_Kincaid" target="_blank" class="btn-gold">Read Kincaid</a>
+      </div>
+    </div>
+
+    <div class="about-right reveal" style="transition-delay: 0.15s;">
+
+      <div class="fact-card">
+        <div class="fact-label">✦ Economic Wonder</div>
+        <div class="fact-title">Your Dream. Their Everyday.</div>
+        <div class="fact-body">Slip into warm waters and powdery sands. Every sunset was made for you. Relax — you deserve it.</div>
+        <div class="fact-fine">* Tourism accounts for approximately 60% of GDP, meaning the nation's survival depends on your comfort. No pressure. Enjoy your piña colada. Local employees earn roughly EC$8/hr to maintain the conditions of your relaxation.</div>
+      </div>
+
+      <div class="fact-card gold-border">
+        <div class="fact-label">✦ Geography</div>
+        <div class="fact-title">365 Beaches. One for Every Day You'll Never Live Here.</div>
+        <div class="fact-body">A geographic miracle! Book your resort package and enjoy seamless luxury across our pristine coastline.</div>
+        <div class="fact-fine">* Resort profits are substantially repatriated to foreign shareholders. The beaches remain. The revenue, largely, does not.</div>
+      </div>
+
+      <div class="fact-card red-border">
+        <div class="fact-label">✦ What You Don't See</div>
+        <div class="fact-title">The Left Side of Every Brochure Photo.</div>
+        <div class="fact-body">Infrastructure, labor, inequality — cropped out by every professional photographer hired to sell you this island.</div>
+        <div class="fact-fine">* "Cultural experiences" presented in hotel lobbies have been curated and adjusted for optimal tourist comfort. Actual local culture occurs off-property and is not included in your package.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="testimonials">
+  <div class="section-eyebrow">✦ Guest Experiences</div>
+  <h2 class="section-title">What Our Visitors<br><em>(Refuse to)</em> See.</h2>
+  <div class="divider-gold"></div>
+
+  <div class="testimonial-grid">
+    <div class="testimonial-card reveal">
+      <div class="stars">★★★★★</div>
+      <p class="quote">"The staff never stopped smiling. I don't know how they do it in that heat in those heavy uniforms, but it made my margaritas taste even better!"</p>
+      <p class="author">— Brenda, Ohio</p>
+      <p class="translation">* Translation: Brenda's comfort relied on emotional labor she tipped $2 for.</p>
+    </div>
+
+    <div class="testimonial-card reveal" style="transition-delay: 0.15s;">
+      <div class="stars">★★★★★</div>
+      <p class="quote">"A seamless trip. We literally never had to leave the resort perimeter. It felt like we weren't even in another country!"</p>
+      <p class="author">— Tom, UK</p>
+      <p class="translation">* Translation: Tom successfully traveled 4,000 miles to remain exactly where he started.</p>
+    </div>
+
+    <div class="testimonial-card reveal" style="transition-delay: 0.3s;">
+      <div class="stars">★★★★★</div>
+      <p class="quote">"The local 'culture night' in the lobby was so authentic! They played Bob Marley and the buffet had mini hot dogs."</p>
+      <p class="author">— Karen & Dave, Florida</p>
+      <p class="translation">* Translation: The resort algorithm accurately predicted Karen and Dave's threshold for 'exotic'.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FINE PRINT STRIP ===== -->
+<div class="fine-print-section">
+  <div class="fine-print-inner">
+    <div class="fine-print-heading">★ Terms &amp; Conditions of Paradise (Please Read Carefully) ★</div>
+    <div class="fine-print-body">
+      <strong>Economic Disclosure:</strong> Resort profits are substantially repatriated to foreign shareholders. Local employees earn an average of EC$8/hr to maintain the conditions of your relaxation. &nbsp;|&nbsp;
+      <strong>Infrastructure Notice:</strong> Roads in non-resort areas may be unpaved. The hospital serving 100,000 residents operates with equipment predating your last iPhone upgrade. Your resort has its own generator. &nbsp;|&nbsp;
+      <strong>Cultural Commodification Clause:</strong> "Local culture" presented in hotel lobbies has been curated, sanitized, and rhythmically adjusted for optimal tourist comfort. &nbsp;|&nbsp;
+      <strong>Colonial Legacy Footnote:</strong> The Library — a great old building — was damaged by an earthquake in 1974 and remains unrestored. The government found funds for an airport, however. &nbsp;|&nbsp;
+      <strong>Visibility Waiver:</strong> By booking this vacation, you agree not to see, acknowledge, or feel responsible for anything occurring outside the resort perimeter. &nbsp;|&nbsp;
+    </div>
+  </div>
+</div>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact">
+  <div class="contact-inner">
+    <div class="contact-left reveal">
+      <div class="section-eyebrow">✦ Book Your Forgetting</div>
+      <h2 class="section-title" style="color: white;">Ready to <em>Not See</em><br>Everything?</h2>
+      <div class="divider-gold"></div>
+
+      <p class="contact-body">
+        We would love to welcome you to our island. Our tourism officers are standing by to help you plan the perfect vacation — one where your comfort is absolute and your awareness is optional.
+      </p>
+
+      <div class="contact-info-row">
+        <div class="contact-info-icon">✉</div>
+        <div class="contact-info-text">
+          <div class="contact-info-label">Email</div>
+          <div class="contact-info-value">pricelessparadise@uktourism.com</div>
+        </div>
+      </div>
+
+      <div class="contact-info-row">
+        <div class="contact-info-icon">☎</div>
+        <div class="contact-info-text">
+          <div class="contact-info-label">Phone (Resort Line)</div>
+          <div class="contact-info-value">+1 (268) 462-0480</div>
+        </div>
+      </div>
+
+      <div class="contact-info-row">
+        <div class="contact-info-icon">◎</div>
+        <div class="contact-info-text">
+          <div class="contact-info-label">Location</div>
+          <div class="contact-info-value">St. John's, Antigua<br><span style="font-size:11px;color:rgba(255,255,255,0.45);">(The parts near the resorts are lovely.)</span></div>
+        </div>
+      </div>
+
+      <div class="contact-fine">
+        * Response times may vary. The Ministry of Tourism operates Monday–Friday, 8am–4pm local time. Local time is not your time. We are aware. We have always been aware of that particular difference.
+      </div>
+    </div>
+
+    <div class="contact-right reveal" style="transition-delay: 0.15s;">
+      <div class="contact-form">
+        <div class="form-group">
+          <div class="form-row">
+            <div>
+              <label class="form-label">First Name</label>
+              <input type="text" class="form-input" placeholder="Your name">
+            </div>
+            <div>
+              <label class="form-label">Last Name</label>
+              <input type="text" class="form-input" placeholder="(Optional, we understand)">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email Address</label>
+          <input type="email" class="form-input" placeholder="Where we'll send the brochures">
+        </div>
+        <div class="form-group">
+          <label class="form-label">I am interested in...</label>
+          <select class="form-select form-input">
+            <option value="">Select an experience</option>
+            <option>Luxury resort package (curated paradise)</option>
+            <option>Adventure tourism (still curated)</option>
+            <option>Cultural immersion (sanitized)</option>
+            <option>Honeymoon (most expensive curated)</option>
+            <option>Learning the actual history of this island</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Your Message</label>
+          <textarea class="form-textarea" placeholder="Ask us anything — except about the library."></textarea>
+        </div>
+        <button class="form-submit" onclick="handleSubmit()">Send Inquiry — Begin Your Forgetting</button>
+        <div class="form-disclaimer">
+          By submitting this form, you acknowledge that Antigua is beautiful, that beauty is real, and that your experience of it will be genuine — within the managed perimeter of your resort. The Ministry of Tourism is not responsible for anything you notice outside that perimeter.
+        </div>
+        <div class="form-success" id="formSuccess">
+          <p>Your inquiry has been received.</p>
+          <small>A tourism officer will contact you shortly with a brochure. The brochure will be beautiful. It will be accurate about the parts it shows you.</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-logo">PRICELESS PARADISE</div>
+  <div class="footer-tagline">Come. Spend. Leave.<br><span style="font-size:11px;color:rgba(245,200,66,0.55);">We'll still be here. We have nowhere else to go.</span></div>
+  <div class="footer-fine">Priceless Paradise Official Publication<br>Est. 1981 · Paradise Certified™</div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
